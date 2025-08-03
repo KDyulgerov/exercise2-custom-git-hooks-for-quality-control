@@ -1,6 +1,12 @@
-Exercise 2: Custom Git Hooks for Quality Control
+# Exercise 2: Custom Git Hooks for Quality Control
 
-commit-msg hook:
+## commit-msg and pre-push hooks
+
+```sh
+# ------------------------
+# .git/hooks/commit-msg
+# ------------------------
+
 #!/bin/sh
 
 commit_msg_file=$1
@@ -17,8 +23,10 @@ fi
 
 echo "Commit message format is valid."
 
+# ------------------------
+# .git/hooks/pre-push
+# ------------------------
 
-pre-push hook:
 #!/bin/sh
 
 echo "Running tests before push ...."
